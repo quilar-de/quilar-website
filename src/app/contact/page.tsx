@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktieren Sie Kila für ein unverbindliches Beratungsgespräch zu 3D-Visualisierungen und virtuellen Touren.",
+    "Kontaktieren Sie Quilar für ein unverbindliches Beratungsgespräch zu 3D-Visualisierungen und virtuellen Touren.",
 };
 
 export default function ContactPage() {
@@ -154,8 +154,8 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <p className="text-gray-900 font-medium">E-Mail</p>
-                      <a href="mailto:info@kila.de" className="text-primary-600 hover:text-primary-700">
-                        info@kila.de
+                      <a href="mailto:info@quilar.de" className="text-primary-600 hover:text-primary-700">
+                        info@quilar.de
                       </a>
                     </div>
                   </div>

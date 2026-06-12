@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Kila - 3D-Visualisierung & Virtuelle Touren für Immobilien",
-    template: "%s | Kila",
+    default: "Quilar - 3D-Visualisierung & Virtuelle Touren für Immobilien",
+    template: "%s | Quilar",
   },
   description:
-    "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Kila.",
+    "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Quilar.",
   keywords: [
     "3D Visualisierung",
     "Virtuelle Tour",
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "Real Estate",
     "Architektur",
   ],
-  authors: [{ name: "Kila" }],
+  authors: [{ name: "Quilar" }],
   openGraph: {
     type: "website",
     locale: "de_DE",
-    url: "https://kila.de",
-    siteName: "Kila",
-    title: "Kila - 3D-Visualisierung & Virtuelle Touren",
+    url: "https://quilar.de",
+    siteName: "Quilar",
+    title: "Quilar - 3D-Visualisierung & Virtuelle Touren",
     description:
       "Professionelle 3D-Visualisierungen und virtuelle Rundgänge für Immobilien.",
   },

@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">K</span>
+                <span className="text-white font-bold text-sm">Q</span>
               </div>
-              <span className="text-xl font-bold text-white">Kila</span>
+              <span className="text-xl font-bold text-white">Quilar</span>
             </div>
             <p className="text-gray-400 max-w-md">
               Professionelle 3D-Visualisierungen und virtuelle Touren für Immobilien.
@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-2">
-              <li>info@kila.de</li>
+              <li><a href="mailto:info@quilar.de" className="hover:text-white transition-colors">info@quilar.de</a></li>
               <li>Deutschland</li>
             </ul>
           </div>
@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Kila. Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Quilar. Alle Rechte vorbehalten.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link href="/impressum" className="text-gray-500 hover:text-gray-300 text-sm transition-colors">

@@ -5,6 +5,18 @@ export const metadata: Metadata = {
   title: "Kontakt",
   description:
     "Kontaktieren Sie Quilar für ein unverbindliches Beratungsgespräch zu 3D-Visualisierungen und virtuellen Touren.",
+  openGraph: {
+    title: "Kontakt | Quilar",
+    description:
+      "Starten Sie Ihr 3D-Visualisierungsprojekt — sprechen Sie uns an für ein unverbindliches Beratungsgespräch.",
+    url: "/contact",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt | Quilar",
+    description:
+      "Starten Sie Ihr 3D-Visualisierungsprojekt — sprechen Sie uns an für ein unverbindliches Beratungsgespräch.",
+  },
 };
 
 export default function ContactPage() {

@@ -31,6 +31,21 @@ export const metadata: Metadata = {
     title: "Quilar - 3D-Visualisierung & Virtuelle Touren",
     description:
       "Professionelle 3D-Visualisierungen und virtuelle Rundgänge für Immobilien.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quilar - Professionelle 3D-Visualisierung & Virtuelle Touren für Immobilien",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quilar - 3D-Visualisierung & Virtuelle Touren",
+    description:
+      "Professionelle 3D-Visualisierungen und virtuelle Rundgänge für Immobilien.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

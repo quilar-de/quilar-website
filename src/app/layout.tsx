@@ -7,6 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kila.de"),
   title: {
     default: "Quilar - 3D-Visualisierung & Virtuelle Touren für Immobilien",
     template: "%s | Quilar",

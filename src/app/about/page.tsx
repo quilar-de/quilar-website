@@ -10,12 +10,21 @@ export const metadata: Metadata = {
     description:
       "Lernen Sie das Team hinter Quilar kennen — Experten für 3D-Visualisierung, Architekturrendering und virtuelle Immobilientouren.",
     url: "/about",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quilar - Professionelle 3D-Visualisierung & Virtuelle Touren für Immobilien",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Über Quilar | 3D-Visualisierung & Virtuelle Touren",
     description:
       "Lernen Sie das Team hinter Quilar kennen — Experten für 3D-Visualisierung, Architekturrendering und virtuelle Immobilientouren.",
+    images: ["/opengraph-image"],
   },
 };
 

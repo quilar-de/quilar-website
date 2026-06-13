@@ -10,12 +10,21 @@ export const metadata: Metadata = {
     description:
       "Starten Sie Ihr 3D-Visualisierungsprojekt — sprechen Sie uns an für ein unverbindliches Beratungsgespräch.",
     url: "/contact",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quilar - Professionelle 3D-Visualisierung & Virtuelle Touren für Immobilien",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kontakt | Quilar",
     description:
       "Starten Sie Ihr 3D-Visualisierungsprojekt — sprechen Sie uns an für ein unverbindliches Beratungsgespräch.",
+    images: ["/opengraph-image"],
   },
 };
 

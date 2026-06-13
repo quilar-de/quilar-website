@@ -11,12 +11,21 @@ export const metadata: Metadata = {
     description:
       "HomeTour, 3D-Visualisierung, virtuelle Inszenierung und Architekturvisualisierung — alle Leistungen von Quilar im Überblick.",
     url: "/services",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quilar - Professionelle 3D-Visualisierung & Virtuelle Touren für Immobilien",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Leistungen | Quilar",
     description:
       "HomeTour, 3D-Visualisierung, virtuelle Inszenierung und Architekturvisualisierung — alle Leistungen von Quilar im Überblick.",
+    images: ["/opengraph-image"],
   },
 };
 

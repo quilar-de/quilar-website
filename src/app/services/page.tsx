@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -58,13 +59,16 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-12 flex items-center justify-center min-h-[400px]">
-              <div className="text-center">
-                <svg className="w-24 h-24 text-primary-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                <p className="text-primary-600 font-medium">HomeTour Demo</p>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden min-h-[400px]">
+              <Image
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
+                alt="Modernes Wohnzimmer – HomeTour virtuelle Rundgang Beispiel"
+                width={800}
+                height={600}
+                priority
+                className="object-cover w-full h-full rounded-2xl"
+                style={{ minHeight: "400px" }}
+              />
             </div>
           </div>
         </div>
@@ -74,13 +78,15 @@ export default function ServicesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-12 flex items-center justify-center min-h-[400px]">
-              <div className="text-center">
-                <svg className="w-24 h-24 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
-                <p className="text-gray-500 font-medium">3D Rendering Beispiel</p>
-              </div>
+            <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden min-h-[400px]">
+              <Image
+                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+                alt="Fotorealistische 3D-Visualisierung eines modernen Gebäudes"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full rounded-2xl"
+                style={{ minHeight: "400px" }}
+              />
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -142,13 +148,15 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-amber-50 to-orange-100 rounded-2xl p-12 flex items-center justify-center min-h-[400px]">
-              <div className="text-center">
-                <svg className="w-24 h-24 text-amber-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p className="text-amber-600 font-medium">Staging Vorher/Nachher</p>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden min-h-[400px]">
+              <Image
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
+                alt="Virtuell inszeniertes Wohnzimmer – vorher/nachher Vergleich"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full rounded-2xl"
+                style={{ minHeight: "400px" }}
+              />
             </div>
           </div>
         </div>

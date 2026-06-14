@@ -1,22 +1,23 @@
 import Link from "next/link";
 
-const localBusinessJsonLd = {
+// Escape `<` to prevent any chance of breaking out of the <script> tag
+// via embedded `</script>` sequences in JSON-LD strings.
+const toJsonLd = (data: unknown) =>
+  JSON.stringify(data).replace(/</g, "\\u003c");
+
+const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "Organization",
+  "@id": "https://kila.de/#organization",
   "name": "Kila",
   "description": "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Kila.",
   "url": "https://kila.de",
+  "logo": "https://kila.de/favicon.ico",
   "email": "info@kila.de",
   "areaServed": {
     "@type": "Country",
-    "name": "DE"
-  },
-  "serviceType": [
-    "3D Visualisierung",
-    "Virtuelle Tour",
-    "Virtuelle Inszenierung"
-  ],
-  "inLanguage": "de-DE"
+    "name": "Germany"
+  }
 };
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLd(organizationJsonLd) }}
       />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-primary-950 to-gray-900 text-white min-h-[90vh] flex items-center">

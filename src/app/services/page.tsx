@@ -8,8 +8,15 @@ export const metadata: Metadata = {
     "Unsere Leistungen: HomeTour virtuelle Rundgänge, 3D-Visualisierungen, virtuelle Inszenierung und Architekturvisualisierung.",
 };
 
-const provider = { "@type": "LocalBusiness", "name": "Kila", "url": "https://kila.de" };
-const areaServed = { "@type": "Country", "name": "DE" };
+// Escape `<` to prevent any chance of breaking out of the <script> tag
+// via embedded `</script>` sequences in JSON-LD strings.
+const toJsonLd = (data: unknown) =>
+  JSON.stringify(data).replace(/</g, "\\u003c");
+
+// Reference the Organization defined on the homepage by @id so search
+// engines treat it as the same entity rather than duplicating it.
+const provider = { "@id": "https://kila.de/#organization" };
+const areaServed = { "@type": "Country", "name": "Germany" };
 
 const servicesJsonLd = [
   {
@@ -47,11 +54,11 @@ const servicesJsonLd = [
 export default function ServicesPage() {
   return (
     <>
-      {servicesJsonLd.map((service, i) => (
+      {servicesJsonLd.map((service) => (
         <script
-          key={i}
+          key={service.name}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(service) }}
         />
       ))}
       {/* Hero */}

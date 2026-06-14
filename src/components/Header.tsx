@@ -1,10 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (mobileMenuOpen && firstMenuItemRef.current) {
+      firstMenuItemRef.current.focus();
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -38,6 +55,8 @@ export default function Header() {
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-nav"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -50,10 +69,22 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+        <div
+          id="mobile-nav"
+          role="navigation"
+          aria-label="Mobiles Menü"
+          className={`md:hidden overflow-hidden transition-all duration-200 ease-in-out ${
+            mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-3">
-              <Link href="/" className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                href="/"
+                ref={firstMenuItemRef}
+                className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
               </Link>
               <Link href="/services" className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
@@ -67,7 +98,7 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );

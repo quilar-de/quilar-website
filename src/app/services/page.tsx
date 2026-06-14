@@ -61,13 +61,12 @@ export default function ServicesPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden min-h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80"
-                alt="Modernes Wohnzimmer – HomeTour virtuelle Rundgang Beispiel"
-                width={800}
-                height={600}
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80&auto=format&fit=crop"
+                alt="Modernes Wohnzimmer – Beispiel für einen virtuellen HomeTour-Rundgang"
+                fill
                 priority
-                className="object-cover w-full h-full rounded-2xl"
-                style={{ minHeight: "400px" }}
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -80,12 +79,11 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 relative rounded-2xl overflow-hidden min-h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
-                alt="Fotorealistische 3D-Visualisierung eines modernen Gebäudes"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full rounded-2xl"
-                style={{ minHeight: "400px" }}
+                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop"
+                alt="Fotorealistische 3D-Visualisierung eines modernen Gebäudes bei Tageslicht"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover rounded-2xl"
               />
             </div>
             <div className="order-1 lg:order-2">
@@ -150,12 +148,11 @@ export default function ServicesPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden min-h-[400px]">
               <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
-                alt="Virtuell inszeniertes Wohnzimmer – vorher/nachher Vergleich"
-                width={800}
-                height={600}
-                className="object-cover w-full h-full rounded-2xl"
-                style={{ minHeight: "400px" }}
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&q=80&auto=format&fit=crop"
+                alt="Virtuell inszeniertes, stilvoll möbliertes Wohnzimmer"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

@@ -6,16 +6,23 @@ import { useEffect, useRef, useState } from "react";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const wasOpenRef = useRef(false);
 
   useEffect(() => {
     if (mobileMenuOpen && firstMenuItemRef.current) {
       firstMenuItemRef.current.focus();
+    } else if (!mobileMenuOpen && wasOpenRef.current && menuButtonRef.current) {
+      // Return focus to the trigger when the menu closes (e.g. Escape key)
+      menuButtonRef.current.focus();
     }
+    wasOpenRef.current = mobileMenuOpen;
   }, [mobileMenuOpen]);
 
   useEffect(() => {
+    if (!mobileMenuOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && mobileMenuOpen) {
+      if (e.key === "Escape") {
         setMobileMenuOpen(false);
       }
     };
@@ -52,9 +59,11 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
+            ref={menuButtonRef}
+            type="button"
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Menu"
+            aria-label="Menü"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-nav"
           >
@@ -73,8 +82,11 @@ export default function Header() {
           id="mobile-nav"
           role="navigation"
           aria-label="Mobiles Menü"
+          aria-hidden={!mobileMenuOpen}
           className={`md:hidden overflow-hidden transition-all duration-200 ease-in-out ${
-            mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            mobileMenuOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 pointer-events-none"
           }`}
         >
           <div className="py-4 border-t border-gray-100">
@@ -82,18 +94,34 @@ export default function Header() {
               <Link
                 href="/"
                 ref={firstMenuItemRef}
+                tabIndex={mobileMenuOpen ? 0 : -1}
                 className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link href="/services" className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                href="/services"
+                tabIndex={mobileMenuOpen ? 0 : -1}
+                className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Leistungen
               </Link>
-              <Link href="/about" className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                href="/about"
+                tabIndex={mobileMenuOpen ? 0 : -1}
+                className="text-gray-600 hover:text-primary-600 transition-colors font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Über uns
               </Link>
-              <Link href="/contact" className="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                href="/contact"
+                tabIndex={mobileMenuOpen ? 0 : -1}
+                className="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition-colors font-medium text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Kontakt
               </Link>
             </div>

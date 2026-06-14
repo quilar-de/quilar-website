@@ -4,11 +4,18 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: Build & Deploy to Hetzner
     runs-on: ubuntu-latest
-    needs: []
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -27,19 +34,54 @@ jobs:
       - name: Build static export
         run: npm run build
 
-      - name: Deploy to Hetzner via rsync
+      - name: Configure SSH
         env:
           SSH_KEY: ${{ secrets.HETZNER_SSH_KEY }}
+          SSH_HOST: ${{ secrets.HETZNER_HOST }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          # Write private key with strict permissions
+          install -m 600 /dev/null ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+
+          # Populate known_hosts. ssh-keyscan accepts bare IPv6 literals,
+          # so no bracket transformation is needed here (rsync is different).
+          ssh-keyscan -H "$SSH_HOST" > ~/.ssh/known_hosts.tmp 2>/dev/null
+          if [ ! -s ~/.ssh/known_hosts.tmp ]; then
+            echo "ERROR: ssh-keyscan returned no host keys for $SSH_HOST" >&2
+            exit 1
+          fi
+          mv ~/.ssh/known_hosts.tmp ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy to Hetzner via rsync
+        env:
           SSH_HOST: ${{ secrets.HETZNER_HOST }}
           SSH_USER: ${{ secrets.HETZNER_USER }}
           DEPLOY_PATH: ${{ secrets.HETZNER_DEPLOY_PATH }}
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts
+          set -euo pipefail
+
+          # Bracket IPv6 literals so rsync's host:path parser does not
+          # mistake the first ':' in the address for the path separator.
+          if [[ "$SSH_HOST" == *:* && "$SSH_HOST" != \[*\] ]]; then
+            RSYNC_HOST="[$SSH_HOST]"
+          else
+            RSYNC_HOST="$SSH_HOST"
+          fi
 
           rsync -avz --delete \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            --exclude='.well-known' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" \
             out/ \
-            "$SSH_USER@$SSH_HOST:$DEPLOY_PATH"
+            "$SSH_USER@$RSYNC_HOST:$DEPLOY_PATH"
+
+      - name: Remove SSH key
+        if: always()
+        run: |
+          if [ -f ~/.ssh/deploy_key ]; then
+            shred -u ~/.ssh/deploy_key 2>/dev/null || rm -f ~/.ssh/deploy_key
+          fi

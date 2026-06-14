@@ -125,25 +125,165 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Why Quilar Section */}
       <section className="py-16 bg-primary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              Warum Quilar?
+            </h2>
+            <p className="text-primary-100 max-w-xl mx-auto">
+              Professionelle Visualisierungen, die überzeugen – vom ersten Entwurf bis zur fertigen Präsentation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">500+</div>
-              <div className="text-primary-100">Projekte</div>
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3l14 9-14 9V3z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-1">Schnelle Umsetzung</h3>
+              <p className="text-primary-100 text-sm">Effiziente Workflows für termingerechte Lieferung</p>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">98%</div>
-              <div className="text-primary-100">Zufriedenheit</div>
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-1">Fotorealistische Qualität</h3>
+              <p className="text-primary-100 text-sm">Renderings, die Käufer und Investoren begeistern</p>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">24h</div>
-              <div className="text-primary-100">Lieferzeit</div>
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-1">Persönliche Betreuung</h3>
+              <p className="text-primary-100 text-sm">Direkter Ansprechpartner von Anfang bis Ende</p>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-1">50+</div>
-              <div className="text-primary-100">Partner</div>
+              <div className="w-12 h-12 bg-primary-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-1">Maßgeschneidert</h3>
+              <p className="text-primary-100 text-sm">Jedes Projekt individuell nach Ihren Anforderungen</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview Section */}
+      {/* TODO: Replace placeholder cards with real project examples (before/after images or rendered screenshots) */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Ausgewählte Projekte
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Ein Einblick in unsere Arbeit – von der Immobilienvisualisierung bis zum virtuellen Rundgang.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
+                <p className="text-gray-400 text-xs mt-1">Wohnanlage — 3D-Visualisierung</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
+                <p className="text-gray-400 text-xs mt-1">Gewerbeimmobilie — HomeTour</p>
+              </div>
+            </div>
+            <div className="group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
+              <div className="text-center p-8">
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
+                <p className="text-gray-400 text-xs mt-1">Einfamilienhaus — Virtuelle Inszenierung</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      {/* TODO: Replace placeholder quotes with real customer testimonials (name, company, role) */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Das sagen unsere Kunden
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Echte Erfahrungen aus erfolgreichen Projekten.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-gray-700 text-lg italic mb-6">
+                „[Kundenzitat einfügen – bitte durch echtes Testimonial ersetzen]"
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-sm">
+                  ?
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">[Name des Kunden]</div>
+                  <div className="text-gray-500 text-sm">[Position], [Unternehmen]</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote className="text-gray-700 text-lg italic mb-6">
+                „[Kundenzitat einfügen – bitte durch echtes Testimonial ersetzen]"
+              </blockquote>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-sm">
+                  ?
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">[Name des Kunden]</div>
+                  <div className="text-gray-500 text-sm">[Position], [Unternehmen]</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

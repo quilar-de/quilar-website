@@ -8,9 +8,52 @@ export const metadata: Metadata = {
     "Unsere Leistungen: HomeTour virtuelle Rundgänge, 3D-Visualisierungen, virtuelle Inszenierung und Architekturvisualisierung.",
 };
 
+const provider = { "@type": "LocalBusiness", "name": "Kila", "url": "https://kila.de" };
+const areaServed = { "@type": "Country", "name": "DE" };
+
+const servicesJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "HomeTour - Virtuelle Rundgänge",
+    "description": "Interaktive 360-Grad-Rundgänge durch Immobilien. Besucher erleben jeden Raum authentisch von zu Hause aus, kompatibel mit allen Geräten und VR-Brillen.",
+    "provider": provider,
+    "areaServed": areaServed,
+    "serviceType": "Virtuelle Tour",
+    "url": "https://kila.de/services"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "3D-Visualisierung",
+    "description": "Fotorealistische 3D-Renderings für Bauprojekte. Außen- und Innenansichten, Tages- und Nachtszenen in druckfähiger Auflösung.",
+    "provider": provider,
+    "areaServed": areaServed,
+    "serviceType": "3D Visualisierung",
+    "url": "https://kila.de/services"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Virtuelle Inszenierung",
+    "description": "Leere Räume virtuell einrichten und gestalten. Kosteneffiziente Alternative zur physischen Möblierung, Lieferung innerhalb 24-48 Stunden.",
+    "provider": provider,
+    "areaServed": areaServed,
+    "serviceType": "Virtual Staging",
+    "url": "https://kila.de/services"
+  }
+];
+
 export default function ServicesPage() {
   return (
     <>
+      {servicesJsonLd.map((service, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(service) }}
+        />
+      ))}
       {/* Hero */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

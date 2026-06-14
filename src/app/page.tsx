@@ -1,8 +1,31 @@
 import Link from "next/link";
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kila",
+  "description": "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Kila.",
+  "url": "https://kila.de",
+  "email": "info@kila.de",
+  "areaServed": {
+    "@type": "Country",
+    "name": "DE"
+  },
+  "serviceType": [
+    "3D Visualisierung",
+    "Virtuelle Tour",
+    "Virtuelle Inszenierung"
+  ],
+  "inLanguage": "de-DE"
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-primary-950 to-gray-900 text-white min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>

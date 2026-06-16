@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Unsere Leistungen: HomeTour virtuelle Rundgänge, 3D-Visualisierungen, virtuelle Inszenierung und Architekturvisualisierung.",
   openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "Quilar",
     title: "Leistungen | Quilar",
     description:
       "HomeTour, 3D-Visualisierung, virtuelle Inszenierung und Architekturvisualisierung — alle Leistungen von Quilar im Überblick.",

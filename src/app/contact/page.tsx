@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Kontaktieren Sie Quilar für ein unverbindliches Beratungsgespräch zu 3D-Visualisierungen und virtuellen Touren.",
   openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "Quilar",
     title: "Kontakt | Quilar",
     description:
       "Starten Sie Ihr 3D-Visualisierungsprojekt — sprechen Sie uns an für ein unverbindliches Beratungsgespräch.",

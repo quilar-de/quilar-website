@@ -97,13 +97,23 @@ export default function ContactForm() {
       if (!ENDPOINT || ENDPOINT.includes("your_form_id")) {
         throw new Error("missing_endpoint");
       }
+      // Trim string fields before sending — keeps Formspree submissions clean.
+      const payload = {
+        firstName: formData.firstName.trim(),
+        lastName: formData.lastName.trim(),
+        email: formData.email.trim(),
+        company: formData.company.trim(),
+        service: formData.service,
+        message: formData.message.trim(),
+      };
+
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -174,8 +184,22 @@ export default function ContactForm() {
       aria-busy={isLoading}
       className="space-y-6"
     >
-      {/* Honeypot field for spam bots — hidden from real users. */}
-      <div aria-hidden="true" className="hidden">
+      {/*
+        Honeypot field for spam bots — visually hidden but still in the DOM so
+        bots that ignore `display:none` will still fill it. We avoid `hidden`
+        / `display:none` because well-behaved bots skip those fields.
+      */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: "-10000px",
+          top: "auto",
+          width: "1px",
+          height: "1px",
+          overflow: "hidden",
+        }}
+      >
         <label htmlFor="_gotcha">Bitte dieses Feld leer lassen</label>
         <input
           type="text"

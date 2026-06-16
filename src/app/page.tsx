@@ -177,65 +177,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Preview Section */}
-      {/* TODO(launch-blocker): Replace placeholder cards with real project examples (before/after images
-          or rendered screenshots). Do NOT deploy to production with the "Projektbild folgt" placeholders
-          visible to end users. */}
+      {/* Portfolio Preview Section
+          Until print-ready project imagery is approved for the website, the portfolio
+          section links to our YouTube channel, where projects are shown in motion. */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Ausgewählte Projekte
+              Projekte in Bewegung sehen
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ein Einblick in unsere Arbeit – von der Immobilienvisualisierung bis zum virtuellen Rundgang.
+              Statt statischer Bilder zeigen wir unsere Arbeit dort, wo sie am besten zur Geltung
+              kommt: in Videos von realen Begehungen, Visualisierungen und Kundengesprächen.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
-                <p className="text-gray-400 text-xs mt-1">Wohnanlage — 3D-Visualisierung</p>
-              </div>
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-md p-8 sm:p-12 text-center">
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-primary-700" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
-                <p className="text-gray-400 text-xs mt-1">Gewerbeimmobilie — HomeTour</p>
-              </div>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 aspect-[4/3] flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <p className="text-gray-500 text-sm font-medium">Projektbild folgt</p>
-                <p className="text-gray-400 text-xs mt-1">Einfamilienhaus — Virtuelle Inszenierung</p>
-              </div>
-            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+              Projektbeispiele auf YouTube
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Auf unserem Kanal finden Sie Aufnahmen von 4D-Visualisierungen, HomeTour-Begehungen
+              in Echtgröße und Gesprächen mit Auftraggebern aus laufenden Projekten.
+            </p>
+            <a
+              href="https://youtube.com/@quilar-de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold"
+            >
+              Zum YouTube-Kanal
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* TODO(launch-blocker): Replace placeholder quotes with real customer testimonials (name, company, role).
-          Do NOT deploy to production with placeholder content visible — placeholder text is in German brackets
-          ("[Kundenzitat einfügen ...]") and will appear to end users until replaced. */}
+      {/* Testimonials Section
+          Quotes are sourced verbatim from videos published on the official Quilar YouTube
+          channel (@quilar-de). Each card links to its source video so visitors can verify. */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -243,52 +226,71 @@ export default function Home() {
               Das sagen unsere Kunden
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Echte Erfahrungen aus erfolgreichen Projekten.
+              Echte Erfahrungen aus erfolgreichen Projekten – im O-Ton auf unserem YouTube-Kanal.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="flex mb-4" role="img" aria-label="5 von 5 Sternen">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-gray-700 text-lg italic mb-6">
-                „[Kundenzitat einfügen – bitte durch echtes Testimonial ersetzen]“
+            <article className="bg-white rounded-2xl p-8 shadow-sm flex flex-col">
+              <blockquote className="text-gray-700 text-lg italic mb-6 flex-grow">
+                „Mit dieser Küche hätte ich keinen Esstisch mehr reinbekommen!“
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-sm">
-                  ?
+                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold text-sm" aria-hidden="true">
+                  J
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">[Name des Kunden]</div>
-                  <div className="text-gray-500 text-sm">[Position], [Unternehmen]</div>
+                  <div className="font-semibold text-gray-900">Julia</div>
+                  <div className="text-gray-500 text-sm">Käuferin einer Neubauimmobilie</div>
                 </div>
               </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="flex mb-4" role="img" aria-label="5 von 5 Sternen">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20" aria-hidden="true">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <blockquote className="text-gray-700 text-lg italic mb-6">
-                „[Kundenzitat einfügen – bitte durch echtes Testimonial ersetzen]“
+              <cite className="not-italic block mt-4 text-sm">
+                <a
+                  href="https://www.youtube.com/watch?v=T7AOo3ELoKo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-700 hover:text-primary-900 underline"
+                >
+                  Julias Erfahrungsbericht auf YouTube ansehen
+                </a>
+              </cite>
+            </article>
+            <article className="bg-white rounded-2xl p-8 shadow-sm flex flex-col">
+              <blockquote className="text-gray-700 text-lg italic mb-6 flex-grow">
+                „Es ist wichtig, wie die Immobilie in 3D wirkt.“
               </blockquote>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-sm">
-                  ?
+                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-700 font-bold text-sm" aria-hidden="true">
+                  DK
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">[Name des Kunden]</div>
-                  <div className="text-gray-500 text-sm">[Position], [Unternehmen]</div>
+                  <div className="font-semibold text-gray-900">Dr. Klee</div>
+                  <div className="text-gray-500 text-sm">Stadtdirektor und Kämmerer, Stadt Herne</div>
                 </div>
               </div>
-            </div>
+              <cite className="not-italic block mt-4 text-sm">
+                <a
+                  href="https://www.youtube.com/watch?v=aoeTxSc-Qww"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-700 hover:text-primary-900 underline"
+                >
+                  Gespräch mit Dr. Klee auf YouTube ansehen
+                </a>
+              </cite>
+            </article>
+          </div>
+          <div className="mt-12 text-center">
+            <a
+              href="https://youtube.com/@quilar-de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
+            >
+              Weitere Kundenstimmen auf unserem YouTube-Kanal
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>

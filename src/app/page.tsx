@@ -1,8 +1,32 @@
 import Link from "next/link";
 
+// Escape `<` to prevent any chance of breaking out of the <script> tag
+// via embedded `</script>` sequences in JSON-LD strings.
+const toJsonLd = (data: unknown) =>
+  JSON.stringify(data).replace(/</g, "\\u003c");
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://quilar.de/#organization",
+  "name": "Quilar",
+  "description": "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Quilar.",
+  "url": "https://quilar.de",
+  "logo": "https://quilar.de/favicon.ico",
+  "email": "info@quilar.de",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Germany"
+  }
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(organizationJsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-gray-900 via-primary-950 to-gray-900 text-white min-h-[90vh] flex items-center">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>

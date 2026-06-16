@@ -1,6 +1,6 @@
-# Kila.de Website
+# Quilar Website
 
-Professional website for Kila - 3D visualization and virtual tour services for real estate.
+Professional website for Quilar - 3D visualization and virtual tour services for real estate.
 
 ## Tech Stack
 

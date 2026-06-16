@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Erfahren Sie mehr über Kila - Ihr Partner für professionelle 3D-Visualisierungen und virtuelle Immobilientouren.",
+    "Erfahren Sie mehr über Quilar - Ihr Partner für professionelle 3D-Visualisierungen und virtuelle Immobilientouren.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Über Kila
+              Über Quilar
             </h1>
             <p className="text-xl text-gray-600">
               Wir verbinden Technologie und Kreativität, um Immobilien digital
@@ -34,7 +34,7 @@ export default function AboutPage() {
                 Unsere Mission
               </h2>
               <p className="text-gray-600 mb-4">
-                Bei Kila glauben wir daran, dass die Zukunft der
+                Bei Quilar glauben wir daran, dass die Zukunft der
                 Immobilienpräsentation digital ist. Unsere Mission ist es,
                 Immobilienunternehmen mit modernster Visualisierungstechnologie
                 auszustatten, die den Verkaufsprozess beschleunigt und das
@@ -59,7 +59,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM12.75 12a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                   </svg>
                 </div>
-                <p className="text-primary-700 font-medium">Team Kila</p>
+                <p className="text-primary-700 font-medium">Team Quilar</p>
               </div>
             </div>
           </div>

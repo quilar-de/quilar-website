@@ -15,7 +15,7 @@ const toJsonLd = (data: unknown) =>
 
 // Reference the Organization defined on the homepage by @id so search
 // engines treat it as the same entity rather than duplicating it.
-const provider = { "@id": "https://kila.de/#organization" };
+const provider = { "@id": "https://quilar.de/#organization" };
 const areaServed = { "@type": "Country", "name": "Germany" };
 
 const servicesJsonLd = [
@@ -27,7 +27,7 @@ const servicesJsonLd = [
     "provider": provider,
     "areaServed": areaServed,
     "serviceType": "Virtuelle Tour",
-    "url": "https://kila.de/services"
+    "url": "https://quilar.de/services"
   },
   {
     "@context": "https://schema.org",
@@ -37,7 +37,7 @@ const servicesJsonLd = [
     "provider": provider,
     "areaServed": areaServed,
     "serviceType": "3D Visualisierung",
-    "url": "https://kila.de/services"
+    "url": "https://quilar.de/services"
   },
   {
     "@context": "https://schema.org",
@@ -47,7 +47,7 @@ const servicesJsonLd = [
     "provider": provider,
     "areaServed": areaServed,
     "serviceType": "Virtual Staging",
-    "url": "https://kila.de/services"
+    "url": "https://quilar.de/services"
   }
 ];
 

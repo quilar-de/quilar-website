@@ -8,12 +8,12 @@ const toJsonLd = (data: unknown) =>
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://kila.de/#organization",
-  "name": "Kila",
-  "description": "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Kila.",
-  "url": "https://kila.de",
-  "logo": "https://kila.de/favicon.ico",
-  "email": "info@kila.de",
+  "@id": "https://quilar.de/#organization",
+  "name": "Quilar",
+  "description": "Professionelle 3D-Visualisierungen, virtuelle Rundgänge und HomeTour-Erlebnisse für Immobilien. Bringen Sie Ihre Objekte zum Leben mit Quilar.",
+  "url": "https://quilar.de",
+  "logo": "https://quilar.de/favicon.ico",
+  "email": "info@quilar.de",
   "areaServed": {
     "@type": "Country",
     "name": "Germany"

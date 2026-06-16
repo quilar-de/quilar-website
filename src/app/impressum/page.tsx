@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function ImpressumPage() {
-  const lastUpdated = "13. Juni 2025";
+  const lastUpdated = "16. Juni 2026";
 
   return (
     <>

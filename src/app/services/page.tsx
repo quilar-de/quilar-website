@@ -6,6 +6,30 @@ export const metadata: Metadata = {
   title: "Leistungen",
   description:
     "Unsere Leistungen: HomeTour virtuelle Rundgänge, 3D-Visualisierungen, virtuelle Inszenierung und Architekturvisualisierung.",
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: "Quilar",
+    title: "Leistungen | Quilar",
+    description:
+      "HomeTour, 3D-Visualisierung, virtuelle Inszenierung und Architekturvisualisierung — alle Leistungen von Quilar im Überblick.",
+    url: "/services",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quilar - Professionelle 3D-Visualisierung & Virtuelle Touren für Immobilien",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Leistungen | Quilar",
+    description:
+      "HomeTour, 3D-Visualisierung, virtuelle Inszenierung und Architekturvisualisierung — alle Leistungen von Quilar im Überblick.",
+    images: ["/opengraph-image"],
+  },
 };
 
 // Escape `<` to prevent any chance of breaking out of the <script> tag

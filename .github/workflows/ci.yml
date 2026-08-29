@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -52,3 +53,10 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
+      - name: Upload static export
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-out
+          path: out/
+          retention-days: 7
+          if-no-files-found: error

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
   description:
-    "Datenschutzerklärung gemäß DSGVO für kila.de – Informationen zur Verarbeitung Ihrer personenbezogenen Daten.",
+    "Datenschutzerklärung gemäß DSGVO für quilar.de – Informationen zur Verarbeitung Ihrer personenbezogenen Daten.",
   robots: { index: false, follow: false },
 };
 
@@ -57,17 +57,17 @@ export default function DatenschutzPage() {
                 Website ist:
               </p>
               <div className="text-gray-700 space-y-1 mb-4">
-                <p className="font-semibold">Kila</p>
-                <p>[Straße und Hausnummer]</p>
-                <p>[PLZ] [Stadt]</p>
+                <p className="font-semibold">Quilar GmbH</p>
+                <p>Am Gulloh 106</p>
+                <p>44339 Dortmund</p>
                 <p>Deutschland</p>
                 <p>
                   E-Mail:{" "}
                   <a
-                    href="mailto:info@kila.de"
+                    href="mailto:info@quilar.de"
                     className="text-primary-600 hover:text-primary-700"
                   >
-                    info@kila.de
+                    info@quilar.de
                   </a>
                 </p>
               </div>
@@ -198,10 +198,10 @@ export default function DatenschutzPage() {
               <p className="text-gray-700 mb-4">
                 Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:{" "}
                 <a
-                  href="mailto:info@kila.de"
+                  href="mailto:info@quilar.de"
                   className="text-primary-600 hover:text-primary-700"
                 >
-                  info@kila.de
+                  info@quilar.de
                 </a>
               </p>
               <p className="text-gray-700">

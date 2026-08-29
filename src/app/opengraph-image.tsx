@@ -87,7 +87,7 @@ export default function Image() {
             fontWeight: "500",
           }}
         >
-          kila.de
+          quilar.de
         </div>
       </div>
     ),

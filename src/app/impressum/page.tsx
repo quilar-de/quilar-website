@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und rechtliche Angaben gemäß TMG §5 für Kila.",
+  description: "Impressum und rechtliche Angaben gemäß § 5 TMG für die Quilar GmbH.",
   robots: { index: false, follow: false },
 };
 
@@ -35,10 +35,30 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <div className="text-gray-700 space-y-1">
-                <p className="font-semibold">Kila</p>
-                <p>[Straße und Hausnummer]</p>
-                <p>[PLZ] [Stadt]</p>
+                <p className="font-semibold">Quilar GmbH</p>
+                <p>Am Gulloh 106</p>
+                <p>44339 Dortmund</p>
                 <p>Deutschland</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Vertreten durch
+              </h2>
+              <div className="text-gray-700 space-y-1">
+                <p>Geschäftsführer: Mohamed Aajour</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Registereintrag
+              </h2>
+              <div className="text-gray-700 space-y-1">
+                <p>Eintragung im Handelsregister</p>
+                <p>Registergericht: Amtsgericht Dortmund</p>
+                <p>Registernummer: HRB 35805</p>
               </div>
             </div>
 
@@ -50,10 +70,10 @@ export default function ImpressumPage() {
                 <p>
                   E-Mail:{" "}
                   <a
-                    href="mailto:info@kila.de"
+                    href="mailto:info@quilar.de"
                     className="text-primary-600 hover:text-primary-700"
                   >
-                    info@kila.de
+                    info@quilar.de
                   </a>
                 </p>
               </div>
@@ -65,18 +85,18 @@ export default function ImpressumPage() {
               </h2>
               <p className="text-gray-700">
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a
-                Umsatzsteuergesetz: [USt-IdNr. falls vorhanden]
+                Umsatzsteuergesetz: DE366612411
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+                Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
               <div className="text-gray-700 space-y-1">
-                <p>[Vor- und Nachname der verantwortlichen Person]</p>
-                <p>[Straße und Hausnummer]</p>
-                <p>[PLZ] [Stadt]</p>
+                <p>Mohamed Aajour</p>
+                <p>Am Gulloh 106</p>
+                <p>44339 Dortmund</p>
               </div>
             </div>
 

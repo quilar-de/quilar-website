@@ -31,7 +31,7 @@ const INITIAL_DATA: FormData = {
 };
 
 const GENERIC_ERROR =
-  "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@kila.de.";
+  "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@quilar.de.";
 
 function validate(data: FormData): FormErrors {
   const errors: FormErrors = {};

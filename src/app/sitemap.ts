@@ -1,5 +1,9 @@
 import { MetadataRoute } from "next";
 
+// Emit sitemap.xml as a static file at build time, required under
+// `output: "export"` (see issue #27).
+export const dynamic = "force-static";
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://quilar.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {

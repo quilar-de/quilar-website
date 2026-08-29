@@ -44,5 +44,16 @@ src/
 
 ## Deployment
 
-This site is configured for static export (`output: 'export'` in next.config.ts).
-The built `out/` directory can be served by any static hosting or Nginx.
+This site is configured for **static export** (`output: 'export'` in
+`next.config.mjs`). `npm run build` emits a fully static site to the `out/`
+directory, which can be served by any static host or Nginx.
+
+Because static export has no image optimization server, `next/image` runs with
+`images.unoptimized: true` — images are served as-is. Do not remove `output:
+'export'` without also updating the deploy pipeline; the two are coupled (see
+issue #27).
+
+**Automated deploy:** pushes to `main` trigger `.github/workflows/deploy.yml`,
+which builds the export and `rsync`s `out/` to the Hetzner production docroot.
+The workflow fails fast if `out/` is missing or empty, so a broken build never
+wipes production.

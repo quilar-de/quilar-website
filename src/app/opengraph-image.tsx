@@ -1,5 +1,8 @@
 import { ImageResponse } from "next/og";
 
+// Render this OG image at build time so it is emitted as a static asset,
+// required under `output: "export"` (see issue #27).
+export const dynamic = "force-static";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

@@ -57,9 +57,9 @@ export default function DatenschutzPage() {
                 Website ist:
               </p>
               <div className="text-gray-700 space-y-1 mb-4">
-                <p className="font-semibold">Quilar GmbH</p>
-                <p>Am Gulloh 106</p>
-                <p>44339 Dortmund</p>
+                <p className="font-semibold">Quilar</p>
+                <p>[Straße und Hausnummer]</p>
+                <p>[PLZ] [Stadt]</p>
                 <p>Deutschland</p>
                 <p>
                   E-Mail:{" "}

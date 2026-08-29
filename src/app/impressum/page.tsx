@@ -35,30 +35,10 @@ export default function ImpressumPage() {
                 Angaben gemäß § 5 TMG
               </h2>
               <div className="text-gray-700 space-y-1">
-                <p className="font-semibold">Quilar GmbH</p>
-                <p>Am Gulloh 106</p>
-                <p>44339 Dortmund</p>
+                <p className="font-semibold">Quilar</p>
+                <p>[Straße und Hausnummer]</p>
+                <p>[PLZ] [Stadt]</p>
                 <p>Deutschland</p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Vertreten durch
-              </h2>
-              <div className="text-gray-700 space-y-1">
-                <p>Geschäftsführer: Mohamed Aajour</p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Registereintrag
-              </h2>
-              <div className="text-gray-700 space-y-1">
-                <p>Eintragung im Handelsregister</p>
-                <p>Registergericht: Amtsgericht Dortmund</p>
-                <p>Registernummer: HRB 35805</p>
               </div>
             </div>
 
@@ -85,7 +65,7 @@ export default function ImpressumPage() {
               </h2>
               <p className="text-gray-700">
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a
-                Umsatzsteuergesetz: DE366612411
+                Umsatzsteuergesetz: [USt-IdNr. falls vorhanden]
               </p>
             </div>
 
@@ -94,9 +74,9 @@ export default function ImpressumPage() {
                 Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
               </h2>
               <div className="text-gray-700 space-y-1">
-                <p>Mohamed Aajour</p>
-                <p>Am Gulloh 106</p>
-                <p>44339 Dortmund</p>
+                <p>[Vor- und Nachname der verantwortlichen Person]</p>
+                <p>[Straße und Hausnummer]</p>
+                <p>[PLZ] [Stadt]</p>
               </div>
             </div>
 

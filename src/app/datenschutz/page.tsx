@@ -224,7 +224,7 @@ export default function DatenschutzPage() {
                 Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber
                 senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte
                 Verbindung erkennen Sie daran, dass die Adresszeile des Browsers
-                von „http://" auf „https://" wechselt und an dem Schloss-Symbol
+                von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol
                 in Ihrer Browserzeile.
               </p>
             </div>
